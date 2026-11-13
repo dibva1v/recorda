@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recorda — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h2 class="page-title">Dashboard</h2>
+
+    <div class="stats">
+      <div class="stat"><div class="label">Total Students</div><div class="value" id="stat-total">—</div></div>
+      <div class="stat"><div class="label">Active Students</div><div class="value" id="stat-active">—</div></div>
+      <div class="stat"><div class="label">Departments</div><div class="value" id="stat-depts">—</div></div>
+      <div class="stat"><div class="label">New This Month</div><div class="value" id="stat-month">—</div></div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Recent Registrations</h3>
+      <table id="recent-table">
+        <thead>
+          <tr><th>Student #</th><th>Name</th><th>Department</th><th>Registered</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="flex gap-2">
+      <a class="btn" href="register.html">Register Student</a>
+      <a class="btn secondary" href="students.html">View All Records</a>
+    </div>
+  </main>
+  <script src="app.js"></script>
+  <script>initDashboard();</script>
+</body>
+</html>

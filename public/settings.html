@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recorda — Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container narrow">
+      <h2 class="page-title">Settings</h2>
+
+      <div class="card">
+        <h3 style="margin-top: 0">Profile</h3>
+        <div class="detail-row">
+          <span class="muted" style="width: 120px">Name: </span
+          ><span id="profile-name"></span>
+        </div>
+        <div class="detail-row">
+          <span class="muted" style="width: 120px">Username: </span
+          ><span id="profile-username"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top: 0">Preferences</h3>
+        <form id="settings-form" novalidate>
+          <p id="settings-error" class="error"></p>
+          <p id="settings-success" class="success"></p>
+
+          <label for="rows_per_page">Rows per page</label>
+          <select id="rows_per_page" name="rows_per_page">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+          </select>
+
+          <label for="theme">Theme</label>
+          <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+
+          <button type="submit">Save Settings</button>
+        </form>
+      </div>
+    </main>
+    <script src="app.js"></script>
+    <script>
+      initSettings();
+    </script>
+  </body>
+</html>

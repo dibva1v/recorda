@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recorda — Student Records</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h2 class="page-title">Student Records</h2>
+
+    <form id="filter-form" class="toolbar">
+      <input id="filter-search" type="search" placeholder="Search name, number, email…" />
+      <select id="filter-dept"><option value="">All departments</option></select>
+      <select id="filter-status">
+        <option value="">All statuses</option>
+        <option value="active">Active</option>
+        <option value="suspended">Suspended</option>
+        <option value="graduated">Graduated</option>
+      </select>
+      <button type="submit" class="secondary">Filter</button>
+      <a class="btn" href="register.html">+ New</a>
+    </form>
+
+    <div class="card" style="padding:0">
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>Student #</th><th>Name</th><th>Department</th>
+            <th>Year</th><th>Status</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="pagination" class="pagination"></div>
+  </main>
+  <script src="app.js"></script>
+  <script>initStudents();</script>
+</body>
+</html>
