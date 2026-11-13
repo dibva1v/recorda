@@ -266,3 +266,5 @@ app.listen(PORT, () => {
   console.log(`Recorda running at http://localhost:${PORT}`);
   console.log(`Login with: admin / admin123`);
 });
+
+module.exports = app;
