@@ -261,10 +261,6 @@ app.use('/api', r);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', (req, res) => res.status(404).json({ error: 'Not found' }));
 
-// ─── Listen ────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`Recorda running at http://localhost:${PORT}`);
-  console.log(`Login with: admin / admin123`);
-});
-
+console.log(`Recorda running at http://localhost:${PORT}`);
+console.log(`Login with: admin / admin123`);
 module.exports = app;
